@@ -60,6 +60,10 @@ elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Android")
 
     # use the OpenGL ES implementation on Android
     set(OPENGL_ES 1)
+elseif(${CMAKE_SYSTEM_NAME} MATCHES "Haiku")
+	set(SFML_OS_HAIKU 1)
+	# don't use the OpenGL ES implementation on Haiku
+	set(OPENGL_ES 0)
 # comparing CMAKE_SYSTEM_NAME with "CYGWIN" generates a false warning depending on the CMake version
 # let's avoid it so the actual error is more visible
 elseif(${CYGWIN})

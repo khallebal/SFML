@@ -98,6 +98,11 @@
 
     #endif
 
+#elif defined(__HAIKU__)
+
+		//Haiku
+		#define SFML_SYSTEM_HAIKU
+
 #else
 
     // Unsupported system
